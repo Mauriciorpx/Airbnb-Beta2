@@ -53,8 +53,8 @@ app.get("/", verbMiddleware, (req, res) => {
   res.status(200).json({ message: "status ok" });
 });
 
-/* app.get("/", async (req, res) => {
-  try {
+ app.get("/", async (req, res) => {
+  /* try {
     const data = await Accommodations.create({
       id: "7e5fc196-8f45-46d2-bb2b-2f8b95340d50",
       title: "premium - vistas 360 ciudad (alberca y gym)",
@@ -72,8 +72,9 @@ app.get("/", verbMiddleware, (req, res) => {
     res.status(200).json({ message: "All ok!", data });
   } catch (error) {
     res.status(400).json(error);
-  }
-}); */
+  } */
+  res.status(200).json({ message: "All ok!" });
+}); 
 app.use("/api/v1/users", userRouter);
 app.use("/api/v1/auth", authRouter);
 app.use("/api/v1/accommodations", accommodationRouter);
